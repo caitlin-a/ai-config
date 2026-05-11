@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Track only config files
+!.gitignore
+!CLAUDE.md
+!settings.json
+!memory/
+!memory/**
+!rules/
+!rules/**
