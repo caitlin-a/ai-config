@@ -1,6 +1,12 @@
 {
   "autoUpdatesChannel": "latest",
   "theme": "auto",
+  "permissions": {
+    "allow": [
+      "Edit(C:/Users/caitl/.claude/*)",
+      "Write(C:/Users/caitl/.claude/*)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
