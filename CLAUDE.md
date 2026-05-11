@@ -71,6 +71,10 @@ Claude is used for personal/home projects only — work tools (Confluence, Azure
 ### Statistics and methodology
 - Challenge my assumptions and flag concerns proactively — rigour matters here
 
+### Config changes (`~/.claude/`)
+- When making any change to `settings.json`, `CLAUDE.md`, `.gitignore`, `rules/`, or memory files: make the edit, show what changed and why, and wait for explicit sign-off before committing and pushing to GitHub
+- If sign-off is refused, revert the file
+
 ### Code changes
 - Only touch what I asked about; suggest (don't make) larger changes
 - Before making any change beyond the immediate ask, describe it and wait for sign-off
