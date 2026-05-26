@@ -17,13 +17,13 @@ config in place, then commit.
 | `skills/` | User-authored skills (`skills/<name>/SKILL.md`) |
 | `agents/` | User-authored subagent definitions |
 | `commands/` | User-authored slash commands |
-| `projects/*/memory/` | Persistent memory written by Claude across sessions; each project has a `MEMORY.md` index and topic files |
 | `.gitignore` | Controls what gets tracked |
 
 ## What's excluded
 
 Everything else in `~/.claude/` — conversation history, session state, cache,
-credentials, IDE locks, telemetry — is gitignored.
+credentials, IDE locks, telemetry, and per-project memory (`projects/*/memory/`)
+— is gitignored and stays local to each machine.
 
 `settings.json` is **deliberately not tracked**: it contains machine-specific
 paths (e.g. `Edit(C:/Users/caitl/.claude/*)` permission globs) that differ

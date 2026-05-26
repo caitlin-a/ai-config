@@ -17,9 +17,3 @@
 !agents/**
 !commands/
 !commands/**
-
-# Track memory files (stored under projects/[project-slug]/memory/)
-!projects/
-!projects/*/
-!projects/*/memory/
-!projects/*/memory/**
