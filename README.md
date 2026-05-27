@@ -4,7 +4,11 @@ My personal Claude Code config, synced to GitHub so I can carry it between machi
 
 ## How it works
 
-This repo *is* `~/.claude`: the directory is a git repo. `.gitignore` excludes everything by default and allowlists only what's worth keeping. Edit config in place, commit, push. No symlinks, no separate repo.
+This repo *is* `~/.claude`: the directory is a git repo.
+
+- `.gitignore` excludes everything by default and allowlists only what's worth keeping
+- Edit config in place, commit, push
+- No symlinks, no separate repo
 
 ## What's tracked
 
@@ -23,7 +27,7 @@ Everything else - conversation history, session state, cache, credentials, and l
 
 ## Setting up on a new machine
 
-Claude Code creates `~/.claude/` on first run. To layer this config on top without touching local credentials or history:
+Claude Code creates `~/.claude/` on first run. To add this config without clobbering local credentials or history:
 
 ```sh
 cd ~/.claude
