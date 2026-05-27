@@ -41,3 +41,7 @@ git branch --set-upstream-to=origin/main main
 `git reset --hard` only overwrites tracked files; ignored files (credentials, history, etc.) are left alone.
 
 After cloning: recreate any local personal context files and update `settings.json` for that machine (paths in the permission globs will differ).
+
+## Future work
+
+Currently Claude Code-specific (e.g. `CLAUDE.md`, `~/.claude/`). If using across multiple AI tools, would need adapting - e.g. `AGENTS.md` for a model-agnostic setup.
