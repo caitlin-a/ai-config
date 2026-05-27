@@ -10,7 +10,7 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "sonnet",
   "autoUpdatesChannel": "latest",
-  "theme": "auto",
-  "model": "opus"
+  "theme": "dark"
 }
