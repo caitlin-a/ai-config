@@ -29,7 +29,6 @@ am, my projects, tools, and file locations) lives in a local, untracked
 ### Config changes (`~/.claude/`)
 - When making any change to `settings.json`, `CLAUDE.md`, `CLAUDE.personal.md`, `.gitignore`, `rules/`, or memory files: make the edit, show what changed and why, and commit locally. Wait for explicit sign-off before pushing to GitHub.
 - If push sign-off is refused, leave the change as an unpushed local commit; revert it if I ask.
-- Batch related changes into one commit rather than committing after every small edit.
 
 ### Code changes
 - Only touch what I asked about; suggest (don't make) larger changes
@@ -39,6 +38,7 @@ am, my projects, tools, and file locations) lives in a local, untracked
 
 ### Shell and git
 - Never mix PowerShell here-string syntax (`@'...'@`) into a command run through the Bash tool — the `@` delimiters are taken literally and corrupt the output (it once mangled a commit message). Match quoting to the shell that actually runs the command; for multi-line git messages prefer repeated `-m` flags.
+- Batch related changes into one commit rather than committing after every small edit.
 
 
 ## Keeping These Files Up to Date
