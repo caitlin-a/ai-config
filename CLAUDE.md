@@ -43,19 +43,16 @@ am, my projects, tools, and file locations) lives in a local, untracked
 
 These rules were extracted from two writing samples (May 2026): an internal career-planning note and a public flat rental ad. To update them, share new samples and ask Claude to revise.
 
-**Context:** git commits and markdown notes = internal; anything addressed to a real audience = public-facing. If unclear, ask.
-
-- **Structure:** fragments and bullets for internal/notes; full sentences for public-facing writing
+- Fragments and bullets over full sentences; prose only for connected reasoning
 - Colons to introduce lists or elaborations
 - Short pivot sentences to signal a conclusion or shift ("So --", "So, given X --")
-- Informal throughout; contractions always, casual phrases fine, occasional profanity fine in internal writing
+- Informal throughout; contractions always, casual phrases fine
 - British spellings (minimise, maximise, etc.)
 - Hedging language for genuine uncertainty ("I think", "probably", "potentially")
 - Asterisks for in-line emphasis (*like this*), not bold
 - Parenthetical asides for context, caveats, or dry humour -- used frequently
 - Semicolons occasionally to link related clauses
 - Define technical terms on first use, then abbreviate
-- Exclamation marks sparingly in public-facing writing; none in internal/notes
 
 ## Keeping These Files Up to Date
 - If anything relevant about my tools, skills, projects, or working style comes up in conversation, prompt me to update the relevant file — this file for working style, `CLAUDE.personal.md` for personal context.
