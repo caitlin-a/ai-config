@@ -1,39 +1,29 @@
 # ai-config
 
-Personal Claude Code configuration, synced to GitHub so it can be carried between
-machines (Windows and macOS).
+My personal Claude Code config, synced to GitHub so I can carry it between machines.
 
-This repository **is** `~/.claude` itself: the directory is a git repo, and
-`.gitignore` ignores everything by default and allowlists only the config worth
-keeping. That means there's no separate repo to sync and no symlinks — you edit
-config in place, then commit.
+## How it works
+
+This repo *is* `~/.claude` -- the directory is a git repo. `.gitignore` excludes everything by default and allowlists only what's worth keeping. Edit config in place, commit, push. No symlinks, no separate repo.
 
 ## What's tracked
 
 | File / Directory | Purpose |
 |---|---|
-| `CLAUDE.md` | Global instructions and context loaded into every Claude session |
-| `rules/` | Reusable instruction files, pulled into sessions on demand |
-| `skills/` | User-authored skills (`skills/<name>/SKILL.md`) |
-| `agents/` | User-authored subagent definitions |
-| `commands/` | User-authored slash commands |
-| `.gitignore` | Controls what gets tracked |
+| `CLAUDE.md` | Global instructions loaded into every Claude session |
+| `rules/` | Reusable instruction files, pulled in on demand |
+| `settings.json` | Model, theme, permissions -- has machine-specific paths, so review on a new machine |
+| `.gitignore` | Controls what's tracked |
+
+`skills/`, `agents/`, and `commands/` are allowlisted but currently empty.
 
 ## What's excluded
 
-Everything else in `~/.claude/` — conversation history, session state, cache,
-credentials, IDE locks, telemetry, and per-project memory (`projects/*/memory/`)
-— is gitignored and stays local to each machine.
-
-`settings.json` is **deliberately not tracked**: it contains machine-specific
-paths (e.g. `Edit(C:/Users/caitl/.claude/*)` permission globs) that differ
-between Windows and macOS. Each machine keeps its own.
+Everything else -- conversation history, session state, cache, credentials, and `CLAUDE.personal.md` (personal context imported by `CLAUDE.md`). Stays local to each machine.
 
 ## Setting up on a new machine
 
-Claude Code creates `~/.claude/` with its own files on first run. To turn that
-fresh directory into a clone of this repo (without touching credentials or
-history, which stay gitignored):
+Claude Code creates `~/.claude/` on first run. To layer this config on top without touching local credentials or history:
 
 ```sh
 cd ~/.claude
@@ -44,19 +34,6 @@ git reset --hard origin/main
 git branch --set-upstream-to=origin/main main
 ```
 
-`git reset --hard` only overwrites tracked config files (`CLAUDE.md`, `skills/`,
-etc.); your local credentials, history, and other ignored files are left alone.
+`git reset --hard` only overwrites tracked files; ignored files (credentials, history, etc.) are left alone.
 
-After cloning, recreate `settings.json` for that machine (theme, model, and any
-permission globs using that machine's home path).
-
-## Day-to-day
-
-Edit config in place, then commit and push as normal:
-
-```sh
-cd ~/.claude
-git add -A
-git commit -m "..."
-git push
-```
+After cloning: recreate `CLAUDE.personal.md` and update `settings.json` for that machine (paths in the permission globs will differ).
