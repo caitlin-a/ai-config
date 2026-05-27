@@ -1,6 +1,6 @@
 # ai-config
 
-My personal Claude Code config, synced to GitHub so I can carry it between machines.
+My personal AI agent config, synced to GitHub so I can carry it between machines. Currently Claude Code-specific; see [Future work](#future-work).
 
 ## How it works
 
