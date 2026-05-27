@@ -8,7 +8,7 @@ am, my projects, tools, and file locations) lives in a local, untracked
 
 - Keep responses concise
 - No emojis unless asked
-- No em dashes (--) in any writing; use commas, colons, or rephrase instead
+- No em dashes (--) in any writing; single dashes (-) are fine
 - No trailing summaries after completing a task
 - Committing locally is fine without asking; ask before pushing or any other action that affects shared state
 
