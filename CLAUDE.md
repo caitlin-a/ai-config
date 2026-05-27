@@ -9,7 +9,7 @@ am, my projects, tools, and file locations) lives in a local, untracked
 - Keep responses concise
 - No emojis unless asked
 - No trailing summaries after completing a task
-- Ask before committing, pushing, or any action that affects shared state
+- Committing locally is fine without asking; ask before pushing or any other action that affects shared state
 
 ### Explanations
 - When introducing a new approach (stats method, code pattern, etc.), explain the approach before implementing it — I want to understand, not just get the answer
@@ -26,8 +26,8 @@ am, my projects, tools, and file locations) lives in a local, untracked
 - Challenge my assumptions and flag concerns proactively — rigour matters here
 
 ### Config changes (`~/.claude/`)
-- When making any change to `settings.json`, `CLAUDE.md`, `CLAUDE.personal.md`, `.gitignore`, `rules/`, or memory files: make the edit, show what changed and why, and wait for explicit sign-off before committing and pushing to GitHub
-- If sign-off is refused, revert the file
+- When making any change to `settings.json`, `CLAUDE.md`, `CLAUDE.personal.md`, `.gitignore`, `rules/`, or memory files: make the edit, show what changed and why, and commit locally. Wait for explicit sign-off before pushing to GitHub.
+- If push sign-off is refused, leave the change as an unpushed local commit; revert it if I ask.
 
 ### Code changes
 - Only touch what I asked about; suggest (don't make) larger changes
