@@ -4,7 +4,7 @@ My personal Claude Code config, synced to GitHub so I can carry it between machi
 
 ## How it works
 
-This repo *is* `~/.claude` -- the directory is a git repo. `.gitignore` excludes everything by default and allowlists only what's worth keeping. Edit config in place, commit, push. No symlinks, no separate repo.
+This repo *is* `~/.claude`: the directory is a git repo. `.gitignore` excludes everything by default and allowlists only what's worth keeping. Edit config in place, commit, push. No symlinks, no separate repo.
 
 ## What's tracked
 
@@ -12,14 +12,14 @@ This repo *is* `~/.claude` -- the directory is a git repo. `.gitignore` excludes
 |---|---|
 | `CLAUDE.md` | Global instructions loaded into every Claude session |
 | `rules/` | Reusable instruction files, pulled in on demand |
-| `settings.json` | Model, theme, permissions -- has machine-specific paths, so review on a new machine |
+| `settings.json` | Model, theme, permissions (has machine-specific paths; review on a new machine) |
 | `.gitignore` | Controls what's tracked |
 
 `skills/`, `agents/`, and `commands/` are allowlisted but currently empty.
 
 ## What's excluded
 
-Everything else -- conversation history, session state, cache, credentials, and `CLAUDE.personal.md` (personal context imported by `CLAUDE.md`). Stays local to each machine.
+Everything else: conversation history, session state, cache, credentials, and local personal context files. Stays local to each machine.
 
 ## Setting up on a new machine
 
@@ -36,4 +36,4 @@ git branch --set-upstream-to=origin/main main
 
 `git reset --hard` only overwrites tracked files; ignored files (credentials, history, etc.) are left alone.
 
-After cloning: recreate `CLAUDE.personal.md` and update `settings.json` for that machine (paths in the permission globs will differ).
+After cloning: recreate any local personal context files and update `settings.json` for that machine (paths in the permission globs will differ).
