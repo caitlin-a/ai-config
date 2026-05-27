@@ -19,7 +19,7 @@ This repo *is* `~/.claude`: the directory is a git repo. `.gitignore` excludes e
 
 ## What's excluded
 
-Everything else: conversation history, session state, cache, credentials, and local personal context files. Stays local to each machine.
+Everything else - conversation history, session state, cache, credentials, and local personal context files - stays local to each machine.
 
 ## Setting up on a new machine
 
