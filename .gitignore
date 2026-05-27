@@ -2,11 +2,13 @@
 *
 
 # Track only config files
-# settings.json is intentionally NOT tracked: it holds machine-specific
-# paths (e.g. permission globs) that differ between Windows and macOS.
+# Note: settings.json is tracked but holds some machine-specific paths
+# (e.g. permission globs) that differ between Windows and macOS — review
+# those on a new machine.
 !.gitignore
 !README.md
 !CLAUDE.md
+!settings.json
 !rules/
 !rules/**
 
