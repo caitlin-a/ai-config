@@ -1,36 +1,34 @@
 # ai-config
 
-Personal AI agent configuration. Works as a standalone repo or as a submodule of [dotfiles](https://github.com/caitlin-a/dotfiles).
+My AI agent config - Claude Code and Cursor.
 
-Inspired by [Jamie's agent-configs](https://github.com/jmemich/agent-configs).
+## What's tracked
 
-## What's here
-
-| File/Dir | Purpose |
+| | |
 |---|---|
-| `AGENTS.md` | Source of truth — tool-neutral working preferences, loaded by all agents |
+| `AGENTS.md` | Working preferences + personal context (tool-neutral; loaded by all agents) |
 | `CLAUDE.md` | One-line shim: `@AGENTS.md` |
-| `settings.json` | Claude Code settings (model, theme, permissions) — no machine-specific paths |
+| `settings.json` | Claude Code settings - model, theme, permissions (no machine-specific paths) |
 | `rules/` | Modular instruction files (e.g. writing style) |
-| `skills/` | Custom skills, linked into `~/.cursor/commands/` for Cursor |
+| `skills/` | Custom skills - linked into `~/.cursor/commands/` for Cursor |
 
-## What stays local (not tracked)
+## What stays local
 
-| File | Why |
+| | |
 |---|---|
-| `~/.claude/AGENTS.personal.md` | Personal context: who I am, projects, tools — private |
+| `~/.claude/AGENTS.personal.md` | Personal context - private |
 | `~/.claude/settings.local.json` | Machine-specific permissions (absolute paths) |
-| `~/.claude/history.jsonl` | Conversation history |
+| `~/.claude/history.jsonl` | Conversation history, session state, cache |
 
 ## Setup
 
-Usually run via `dotfiles/setup.sh`, but can be run standalone:
+Usually called from `dotfiles/setup.sh`, but works standalone:
 
 ```bash
 git clone git@github.com:caitlin-a/ai-config.git
 bash ai-config/setup.sh
 ```
 
-`setup.sh` symlinks config files into `~/.claude/` and skills into `~/.cursor/commands/`. Idempotent - safe to re-run.
+Symlinks config into `~/.claude/` and skills into `~/.cursor/commands/`. Idempotent.
 
-After first run, create `~/.claude/AGENTS.personal.md` with your personal context.
+After first run: create `~/.claude/AGENTS.personal.md` with your personal context.
