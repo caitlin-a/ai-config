@@ -2,7 +2,7 @@
 
 My personal AI agent config, pushed to GitHub so I can share with others and port between machines. Attempting to make model-agnostic.
 
-Intended to be used as a submodule of [`dotfiles`](https://github.com/caitlin-a/dotfiles), where `setup.sh` symlinks everything into place so the same config is available on any machine. Changes are auto-committed and pushed daily to a dated branch (`auto/YYYY-MM-DD`) via `dotfiles/sync.sh`. Review on GitHub and merge to main when happy.
+Intended to be used as a submodule of [`dotfiles`](https://github.com/caitlin-a/dotfiles), where `setup.sh` symlinks everything into place so the same config is available on any machine. Changes are auto-committed and pushed daily to the `auto/sync` branch via `dotfiles/sync.sh`. Merge to main manually whenever you're happy with it.
 
 ## Layout
 
