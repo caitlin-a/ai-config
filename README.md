@@ -1,47 +1,36 @@
 # ai-config
 
-My personal AI agent config, synced to GitHub so I can carry it between machines. Currently Claude Code-specific; see [Future work](#future-work).
+Personal AI agent configuration. Works as a standalone repo or as a submodule of [dotfiles](https://github.com/caitlin-a/dotfiles).
 
-## How it works
+Inspired by [Jamie's agent-configs](https://github.com/jmemich/agent-configs).
 
-This repo *is* `~/.claude`: the directory is a git repo.
+## What's here
 
-- `.gitignore` excludes everything by default and allowlists only what's worth keeping
-- Edit config in place, commit, push
-- No symlinks, no separate repo
-
-## What's tracked
-
-| File / Directory | Purpose |
+| File/Dir | Purpose |
 |---|---|
-| `CLAUDE.md` | Global instructions loaded into every Claude session |
-| `rules/` | Reusable instruction files, pulled in on demand |
-| `settings.json` | Model, theme, permissions (has machine-specific paths; review on a new machine) |
-| `.gitignore` | Controls what's tracked |
+| `AGENTS.md` | Source of truth — tool-neutral working preferences, loaded by all agents |
+| `CLAUDE.md` | One-line shim: `@AGENTS.md` |
+| `settings.json` | Claude Code settings (model, theme, permissions) — no machine-specific paths |
+| `rules/` | Modular instruction files (e.g. writing style) |
+| `skills/` | Custom skills, linked into `~/.cursor/commands/` for Cursor |
 
-`skills/`, `agents/`, and `commands/` are allowlisted but currently empty.
+## What stays local (not tracked)
 
-## What's excluded
+| File | Why |
+|---|---|
+| `~/.claude/AGENTS.personal.md` | Personal context: who I am, projects, tools — private |
+| `~/.claude/settings.local.json` | Machine-specific permissions (absolute paths) |
+| `~/.claude/history.jsonl` | Conversation history |
 
-Everything else - conversation history, session state, cache, credentials, and local personal context files - stays local to each machine.
+## Setup
 
-## Setting up on a new machine
+Usually run via `dotfiles/setup.sh`, but can be run standalone:
 
-Claude Code creates `~/.claude/` on first run. To add this config without clobbering local credentials or history:
-
-```sh
-cd ~/.claude
-git init -b main
-git remote add origin https://github.com/caitlin-a/ai-config.git
-git fetch origin
-git reset --hard origin/main
-git branch --set-upstream-to=origin/main main
+```bash
+git clone git@github.com:caitlin-a/ai-config.git
+bash ai-config/setup.sh
 ```
 
-`git reset --hard` only overwrites tracked files; ignored files (credentials, history, etc.) are left alone.
+`setup.sh` symlinks config files into `~/.claude/` and skills into `~/.cursor/commands/`. Idempotent - safe to re-run.
 
-After cloning: recreate any local personal context files and update `settings.json` for that machine (paths in the permission globs will differ).
-
-## Future work
-
-Currently Claude Code-specific (e.g. `CLAUDE.md`, `~/.claude/`). If using across multiple AI tools, would need adapting - e.g. `AGENTS.md` for a model-agnostic setup.
+After first run, create `~/.claude/AGENTS.personal.md` with your personal context.
