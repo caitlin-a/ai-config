@@ -8,7 +8,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "sonnet",
+  "model": "opus",
   "autoUpdatesChannel": "latest",
   "theme": "dark"
 }
