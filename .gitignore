@@ -17,3 +17,5 @@
 !agents/**
 !commands/
 !commands/**
+
+.DS_Store
