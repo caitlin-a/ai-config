@@ -17,3 +17,6 @@
 !agents/**
 !commands/
 !commands/**
+
+# Never track macOS Finder metadata, even inside allowed dirs
+.DS_Store
