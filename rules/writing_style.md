@@ -14,4 +14,3 @@ These rules were extracted from two writing samples (May 2026): an internal care
 - Parenthetical asides for context, caveats, or dry humour (used frequently)
 - Semicolons occasionally to link related clauses
 - Define technical terms on first use, then abbreviate
-- Single dashes fine (-); no em dashes (--)

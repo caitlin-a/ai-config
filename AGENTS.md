@@ -4,7 +4,7 @@
 
 ## Style
 - Keep responses concise; no trailing summaries
-- No emojis unless asked; no em dashes (--)
+- No emojis unless asked
 - Committing locally is fine. Pushing to private repos is fine anytime; ask before pushing to public repos or any other action that affects shared state
 
 ## Pace
@@ -25,6 +25,9 @@
 - I want to be able to understand all my code — don't introduce patterns or abstractions without explaining them
 - Challenge statistical assumptions and flag methodological concerns - rigour matters
 - Match the Python style of whatever is already in the file
+
+## Subagent delegation
+- When running as Opus or Fable, delegate mechanical/basic subtasks to a cheaper subagent rather than doing them yourself: pass `model: "sonnet"` on the Agent tool call, or `model: "haiku"` for very trivial ones (checking a file structure, reading a webpage, generating a file after a decision has already been made). Reserve the parent model for judgment calls, synthesis, and anything needing real reasoning.
 
 ## Repo hygiene
 - Never mix PowerShell here-string syntax (`@'...'@`) into a command run through the Bash tool — the `@` delimiters are taken literally and corrupt the output (it once mangled a commit message). Match quoting to the shell that actually runs the command; for multi-line git messages prefer repeated `-m` flags.
