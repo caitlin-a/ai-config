@@ -4,7 +4,7 @@ My personal AI agent config, pushed to GitHub so I can share with others and por
 
 Intended to be used as a submodule of [`dotfiles`](https://github.com/caitlin-a/dotfiles), where `setup.sh` symlinks everything into place so the same config is available on any machine.
 
-Changes are auto-committed and pushed daily to the `auto/sync` branch via `dotfiles/sync.sh`, so that I don't lose them if the worst happens.
+Changes are auto-committed and pushed daily to the `auto-sync` branch via `dotfiles/sync.sh`, so that I don't lose them if the worst happens.
 
 ## Layout
 
