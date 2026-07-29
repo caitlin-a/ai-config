@@ -5,7 +5,7 @@
 ## Style
 - Keep responses concise; no trailing summaries
 - No emojis unless asked
-- Committing locally is fine. Pushing to private repos is fine anytime; ask before pushing to public repos or any other action that affects shared state
+- Ask before committing and pushing
 
 ## Pace
 - Agree on a plan before implementing - deliberate beats rapid solo execution
